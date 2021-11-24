@@ -1,11 +1,10 @@
 name: CI
 
 on:
-  pull_request:
-    branches:
-      - main
+  push:
+    branches: ["main"]
 jobs:
-  test_pull_request:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
